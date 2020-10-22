@@ -46,8 +46,8 @@ body {
      making it bigger */
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
-  -webkit-box-shadow: 0 10px 0.5rem #000, 0.2;
-          box-shadow: 0 10px 0.5rem #000, 0.2;
+  -webkit-box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 .btn::after {
@@ -60,6 +60,8 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .btn:hover::after {
@@ -76,6 +78,162 @@ body {
           transform: scaleX(1.5) scaleY(1.6);
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+html,
+body {
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.panda {
+  height: 20rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 50%;
+}
+
+.panda:hover {
+  border-radius: 0;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  /* filter mdn */
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+html,
+body {
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.text-effect {
+  background-image: url("./media/pastel.jpg");
+  background-position: center;
+  color: transparent;
+  font-size: 8rem;
+  -webkit-background-clip: text;
+  -webkit-transition: all 0.3sec;
+  transition: all 0.3sec;
+}
+
+.text-effect:hover {
+  -webkit-transform: skewY(-10deg);
+          transform: skewY(-10deg);
+  letter-spacing: 3rem;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.drinks-parent {
+  width: 60rem;
+  height: 40rem;
+}
+
+.drinks-gallery {
+  margin: 3rem;
+  position: relative;
+}
+
+.drinks-photo {
+  position: absolute;
+  height: 20rem;
+  -webkit-box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  outline-offset: 1rem;
+}
+
+.drinks-photo:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-box-shadow: 0.3rem 1rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0.3rem 1rem rgba(0, 0, 0, 0.4);
+  outline: 1rem solid #00b0ff;
+  z-index: 2;
+}
+
+.drinks-gallery:hover .drinks-photo:not(:hover) {
+  /* when hovering a part of the gallery, anything not being hovered inside that gallery will shrink and lose its opacity */
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  opacity: 0.3;
+}
+
+.drinks-1 {
+  top: 10rem;
+  left: 15%;
+}
+
+.drinks-2 {
+  top: 2rem;
+  right: 0;
+}
+
+.drinks-3 {
+  top: -2rem;
+  left: 0;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.explore {
+  height: 30rem;
+  position: relative;
+}
+
+.explore-picture {
+  height: 30rem;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.explore-header {
+  font-size: 3rem;
+  opacity: 0;
+  color: white;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.explore:hover .explore-picture {
+  -webkit-filter: grayscale(90%);
+          filter: grayscale(90%);
+}
+
+.explore:hover .explore-header {
+  opacity: 1;
+  top: 50%;
 }
 
 .container {

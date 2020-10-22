@@ -1,0 +1,45 @@
+@import "_variables.scss";
+
+.drinks-parent {
+  width: 60rem;
+  height: 40rem;
+}
+.drinks-gallery {
+  margin: 3rem;
+  position: relative;
+}
+
+.drinks-photo {
+  position: absolute;
+  height: 20rem;
+  box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.4);
+  transition: all 0.3s;
+  outline-offset: 1rem;
+}
+
+.drinks-photo:hover {
+  transform: scale(1.3);
+  box-shadow: 0.3rem 1rem rgba(0, 0, 0, 0.4);
+  outline: 1rem solid color(blue);
+  z-index: 2;
+}
+.drinks-gallery:hover .drinks-photo:not(:hover) {
+  /* when hovering a part of the gallery, anything not being hovered inside that gallery will shrink and lose its opacity */
+  transform: scale(0.8);
+  opacity: 0.3;
+}
+
+.drinks-1 {
+  top: 10rem;
+  left: 15%;
+}
+
+.drinks-2 {
+  top: 2rem;
+  right: 0;
+}
+
+.drinks-3 {
+  top: -2rem;
+  left: 0;
+}

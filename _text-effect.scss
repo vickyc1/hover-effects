@@ -1,0 +1,14 @@
+@import "_variables.scss";
+.text-effect {
+  background-image: url("./media/pastel.jpg");
+  background-position: center;
+  color: transparent;
+  font-size: 8rem;
+  -webkit-background-clip: text;
+  transition: all 0.3sec;
+}
+
+.text-effect:hover {
+  transform: skewY(-10deg);
+  letter-spacing: 3rem;
+}

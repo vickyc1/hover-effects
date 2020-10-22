@@ -1,0 +1,33 @@
+@import "_variables.scss";
+
+.explore {
+  height: 30rem;
+  position: relative;
+}
+
+.explore-picture {
+  height: 30rem;
+  clip-path: circle();
+  transition: all 0.3s;
+}
+
+.explore-header {
+  font-size: 3rem;
+  opacity: 0;
+  color: white;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.explore:hover .explore-picture {
+  filter: grayscale(90%);
+}
+
+.explore:hover .explore-header {
+  opacity: 1;
+  top: 50%;
+}

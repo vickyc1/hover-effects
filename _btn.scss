@@ -27,7 +27,7 @@
   /* transform: scale(2);
      making it bigger */
   transform: translateY(-2px);
-  box-shadow: 0 10px 0.5rem (color(black), 0.2);
+  box-shadow: 0 10px 0.5rem rgba(color(black), 0.2);
 }
 
 .btn::after {
@@ -40,6 +40,7 @@
   top: 0;
   left: 0;
   z-index: -1;
+  transition: all 0.3s;
 }
 
 .btn:hover::after {
